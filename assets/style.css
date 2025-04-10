@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+
+.sobre {
+    /* Cor de fundo suave */
+    background-color: #f9f5f0;
+    padding: 4rem 0; 
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Para quebrar o texto em multiplas linhas */
+    align-items: center;
+    gap: 3rem;
+}
+
+.sobre-conteudo {
+    flex: 1; /* Para preencher o texto no espaço do container */
+    min-width: 300px;
+    order: 2; /* texto vai para a direita para aparecer depois da imagem */
+}
+
+.sobre-imagem {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 2rem;
+    order: 1; /* Imagem vai para a esquerda para aparecer antes do texto */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+
+.sobre h2 {
+    /* Cor marrom escuro */
+    color: #3e2723;
+    font-size: 19px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Barra decorativa sob o título */
+.sobre h2::after {
+    content: '';
+    display: block;
+    width: 540px;
+    height: 4px;
+    background-color: #6d4c41;
+    margin-top: 0.5rem;
+}
+
+.sobre p {
+    color: #5d4037;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    display: block; /* Para a imagem ocupar a largura total da div */
+    transition: transform 0.3s ease;
+}
+
+/* Evento de zoom na imagem */
+.sobre-imagem:hover img {
+    transform: scale(1.03);
+}
+
+/* Responsividade do site */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .sobre-conteudo, .sobre-imagem {
+        order: initial; /* Reseta a ordem para o fluxo normal */
+        min-width: 100%;
+    }
+
+    .sobre h2 {
+        font-size: 2rem;
+    }
+}

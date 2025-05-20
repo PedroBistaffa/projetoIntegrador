@@ -85,6 +85,8 @@
     height: auto;
     display: block; /* Para a imagem ocupar a largura total da div */
     transition: transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 /* Evento de zoom na imagem */
@@ -103,6 +105,7 @@
 .destaque-item {
     flex: 1;
     min-width: 150px;
+    transition: transform 0.3s ease;
 }
 
 .destaque-icone {
